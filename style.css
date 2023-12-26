@@ -49,6 +49,11 @@ body {
   text-align: center;
   padding: var(--padding) calc(var(--padding) * 2);
   border-radius: 0 0 2rem 2rem;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.section-title {
+  font-weight: 800;
 }
 
 .result-score {
@@ -59,8 +64,8 @@ body {
   width: 9rem;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  font-size: 0.9rem;
   margin: 0 auto;
+  font-size: 0.9rem;
 }
 
 .result-score span {
@@ -78,6 +83,8 @@ body {
 
 .summary {
   padding: var(--padding);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .summary-item {
@@ -135,4 +142,35 @@ body {
 
 .button:hover {
   background: var(--gradient-1);
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .result-summary {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 1rem;
+    box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  .result {
+    border-radius: 0 2rem 2rem 0;
+  }
+
+  .summary {
+    margin: 0;
+  }
+
+  .result-score {
+    width: 10rem;
+  }
 }
