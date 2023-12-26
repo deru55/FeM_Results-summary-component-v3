@@ -20,7 +20,7 @@
   --clr-neutral-4: hsl(224, 30%, 27%);
   --gradient-1: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   --gradient-2: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-  --padding: 2rem;
+  --padding: 1.5rem;
 }
 
 img {
@@ -31,6 +31,7 @@ img {
 body {
   font-size: 1.125rem;
   font-family: var(--font-family-default);
+  color: var(--clr-neutral-4);
 }
 
 .flex-flow {
@@ -40,14 +41,13 @@ body {
 }
 
 .large-gap {
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .result {
   background: var(--gradient-1);
   text-align: center;
-  color: var(--clr-neutral-1);
-  padding: var(--padding) calc(var(--padding) * 1.5);
+  padding: var(--padding) calc(var(--padding) * 2);
   border-radius: 0 0 2rem 2rem;
 }
 
@@ -66,12 +66,14 @@ body {
 .result-score span {
   font-size: 3.5rem;
   font-weight: 800;
+  color: var(--clr-neutral-1);
 }
 
 .result-rank {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
   gap: 0.5rem;
+  color: var(--clr-neutral-1);
 }
 
 .summary {
@@ -83,6 +85,13 @@ body {
   justify-content: space-between;
   padding: 1rem;
   border-radius: 1rem;
+  background-color: var(--item-bg-color);
+  color: hsl(241, 100%, 89%);
+}
+
+.summary-item span {
+  color: var(--clr-neutral-4);
+  font-weight: 700;
 }
 
 .flex-group {
@@ -91,22 +100,39 @@ body {
   gap: 0.5rem;
 }
 
+.summary-item-title {
+  color: var(--item-color);
+}
+
 .clr-1 {
-  color: var(--clr-primary-1);
-  background-color: hsla(0, 100%, 67%, 0.1);
+  --item-bg-color: hsla(0, 100%, 67%, 0.1);
+  --item-color: var(--clr-primary-1);
 }
 
 .clr-2 {
-  color: var(--clr-primary-2);
-  background-color: hsla(39, 100%, 56%, 0.1);
+  --item-bg-color: hsla(39, 100%, 56%, 0.1);
+  --item-color: var(--clr-primary-2);
 }
 
 .clr-3 {
-  color: var(--clr-primary-3);
-  background-color: hsla(166, 100%, 37%, 0.1);
+  --item-bg-color: hsla(166, 100%, 37%, 0.1);
+  --item-color: var(--clr-primary-3);
 }
 
 .clr-4 {
-  color: var(--clr-primary-4);
-  background-color: hsla(234, 85%, 45%, 0.1);
+  --item-bg-color: hsla(234, 85%, 45%, 0.1);
+  --item-color: var(--clr-primary-4);
+}
+
+.button {
+  background-color: var(--clr-neutral-4);
+  border: 0;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: var(--clr-neutral-1);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--gradient-1);
 }
