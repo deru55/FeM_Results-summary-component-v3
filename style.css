@@ -41,7 +41,7 @@ body {
 }
 
 .large-gap {
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .result {
@@ -54,6 +54,7 @@ body {
 
 .section-title {
   font-weight: 800;
+  font-size: 1.5rem;
 }
 
 .result-score {
